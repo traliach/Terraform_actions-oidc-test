@@ -25,6 +25,7 @@ jobs:
 
   run-windows-command:
     runs-on: windows-latest
+    needs : ["run-shell-commands"]
     steps:
       - name: Directory
         run: Get-Location
