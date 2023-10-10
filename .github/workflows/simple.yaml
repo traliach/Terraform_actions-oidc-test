@@ -16,3 +16,20 @@ jobs:
         run: |
           node -v
           npm -v
+
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+
+  run-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Directory
+        run: Get-Location
+
+      - name: directory bash
+        run: pwd
+        shell: bash
+
